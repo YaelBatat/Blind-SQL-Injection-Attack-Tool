@@ -1,0 +1,11 @@
+**Exercise 4 – Blind SQL Injection**
+
+The attack exploits a boolean-based blind SQL injection vulnerability in the web application's order status page.
+By carefully crafted SQL injection payloads, the script systematically extracts the password for a specific user ID
+through a binary search approach. The attack works by sending strategic SQL queries that manipulate the application's
+response, allowing the extraction of password characters bit by bit.
+
+The script employs two main techniques: first, determining the exact length of the password using binary search, and
+then extracting each character's ASCII value through bit-wise queries. By leveraging the application's boolean response
+("Your order has been sent!" or not), the script can infer information about the database contents without directly
+seeing the data, ultimately reconstructing the complete password for the target user ID.
